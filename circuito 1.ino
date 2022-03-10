@@ -4,7 +4,6 @@ https://www.tinkercad.com/things/9sMqw70Y9Hk-copy-of-semaforo-1/editel?sharecode
 */
 
 
-
 void setup()
 {
   pinMode(13, OUTPUT);
