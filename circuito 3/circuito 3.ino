@@ -29,41 +29,28 @@ void setup()
     Serial.begin(9600);
 }
 
-void semaforo_coches()
-{
-    digitalWrite(rojo_peatones, HIGH);
-    digitalWrite(verde_peatones, LOW);
-    digitalWrite(verde_sem, HIGH);
-    digitalWrite(rojo_sem, LOW);
-    digitalWrite(amarillo_sem, LOW);
-    delay(tiempo); // Espera por 0.5 segundo
-    digitalWrite(verde_sem, LOW);
-    digitalWrite(rojo_sem, LOW);
-    digitalWrite(amarillo_sem, HIGH);
-    delay(tiempo); //Espera por 0.9 segundos
-    digitalWrite(verde_sem, LOW);
-    digitalWrite(rojo_sem, HIGH);
-    digitalWrite(amarillo_sem, LOW);
-    delay (tiempo); //Espera por 1 segundos
-}
 
 
 void loop() 
 {
+  	digitalWrite(verde_sem, HIGH);
+  	digitalWrite(rojo_peatones, HIGH);
     if (digitalRead(boton) == HIGH)
     {
-      digitalWrite(rojo_sem,HIGH);
-      digitalWrite(rojo_peatones,LOW);
-      digitalWrite(amarillo_sem,LOW);
-      digitalWrite(verde_sem,LOW);
-      digitalWrite(verde_peatones,HIGH);
-      delay(tiempo); //5s
+      digitalWrite(verde_sem, LOW);
+      digitalWrite(amarillo_sem, HIGH);
       digitalWrite(rojo_peatones, LOW);
-      Serial.print("Boton pulsado\n");
-      delay(tiempo); //5s
-     }
-     else
-     {
-      semaforo_coches();
-     }
+      digitalWrite(verde_peatones, HIGH);
+      delay(1000);
+      digitalWrite(amarillo_sem, LOW);
+      digitalWrite(rojo_sem, HIGH);
+      delay(1000);
+      digitalWrite(rojo_sem, LOW);
+      digitalWrite(amarillo_sem, HIGH);
+      digitalWrite(verde_peatones,LOW);
+      digitalWrite(amarillo_sem, LOW);
+      delay(1000);
+      //digitalWrite(verde_sem, HIGH);
+      //digitalWrite(rojo_peatones, HIGH);
+    }
 }
