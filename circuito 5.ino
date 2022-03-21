@@ -1,12 +1,13 @@
+/* 
+Enlace Tinkercad
+https://www.tinkercad.com/things/bZdwqdBzeEj-brave-curcan-kasi/editel?sharecode=2fTFN41US1NrThV--KHrreWv1gnOGeK6Sn2pWLd2dWQ
+*/
+
 #define led1 7
 #define led2 2
 #define led3 8
 #define led4 4
 
-/* 
-Enlace Tinkercad
-https://www.tinkercad.com/things/bZdwqdBzeEj-brave-curcan-kasi/editel?sharecode=2fTFN41US1NrThV--KHrreWv1gnOGeK6Sn2pWLd2dWQ
-*/
 
 #define tiempo 500
 
