@@ -1,5 +1,5 @@
 /*
-Enlace TInkercad
+Enlace Tinkercad
 https://www.tinkercad.com/things/0g13RYPFAtK-grand-waasa/editel?sharecode=xid7pV1uLvk0ANg8YNyyLKGwu6-clDUTGh2xhsc4HTU
 */
 
