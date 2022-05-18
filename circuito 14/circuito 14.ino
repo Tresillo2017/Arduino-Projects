@@ -27,29 +27,32 @@ pinMode(11, OUTPUT);
 
 void loop()
 {
-  int dist = 0.01723 * valor(5, 4);
+  int dist = 0.01723 * valor(5, 4); 
   Serial.println(dist);
-  if (dist < 75) 
+  if (dist < 10) 
   {
   digitalWrite(10, HIGH);
   digitalWrite(9, LOW);
   digitalWrite(8, LOW);
-  tone(11, 523, 500); 
+  tone(11,float(dist*20), 600);
+  // tone(11, 523, 500); 
   delay(500); 
   } 
   else 
   {
-    if (0.01723 * valor(5, 4) < 125) 
+    if (0.01723 * valor(5, 4) < 30) 
     {
     digitalWrite(10, LOW);
     digitalWrite(9, HIGH);
     digitalWrite(8, LOW);
-    tone(11, 523, 500); 
-    delay(1000); 
+    tone(11,float(dist*15), 500);
+    // tone(11, 523, 500); 
+    delay(500); 
     }
     else 
     {
-    noTone(11);
+    tone(11,float(dist*10), 100);
+    // noTone(11);
     digitalWrite(10, LOW);
     digitalWrite(9, LOW);
     digitalWrite(8, HIGH);
